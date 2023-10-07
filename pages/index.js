@@ -1,12 +1,26 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+
+const compounding = (a,d) => {
+  for(let i = 1; i<=d; i++) {
+    a *= 2;
+  }
+  console.log(a)
+}
+
+compounding(1,30);
 
 export default function Home() {
   return (
     <div>
-      <input type='text'>Enter uo</input>
+      <label>Enter you investment amount</label>
+      <br/>
+      <input type='text'/>
+      <br/>
+      <label>Enter you days of investment</label>
+      <br/>
+      <input type='text'/>
+      <button type='submit'>submit</button>
     </div>
   )
 }
